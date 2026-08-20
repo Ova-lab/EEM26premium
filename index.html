@@ -419,20 +419,9 @@ const tick = setInterval(() => {
 
 
 
-function closePayModal() {
-  document.getElementById('pay-modal').classList.remove('active');
-  document.body.style.overflow = '';
-}
-document.getElementById('pay-modal').addEventListener('click', function(e) {
-  if (e.target === this) closePayModal();
-});
 
 
-
-
-});
-
-const obs = new IntersectionObserver(entries => {
+const const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
   });
